@@ -1,18 +1,18 @@
 //
-//  CoderTests.m
-//  CoderTests
+//  LeaderboardTests.m
+//  LeaderboardTests
 //
-//  Created by Rosh Sugathan Thaivalappil on 10/16/19.
+//  Created by Rosh Sugathan Thaivalappil on 10/18/19.
 //  Copyright © 2019 Rosh Sugathan Thaivalappil. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface CoderTests : XCTestCase
+@interface LeaderboardTests : XCTestCase
 
 @end
 
-@implementation CoderTests
+@implementation LeaderboardTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.

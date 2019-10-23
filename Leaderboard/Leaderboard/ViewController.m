@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (nonatomic, strong) NSString *teamname;
 
 @end
 
@@ -16,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   // self.teamname =
     // Do any additional setup after loading the view.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+}
 
 @end

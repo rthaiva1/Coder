@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Leaderboard
 //
-//  Created by Rosh Sugathan Thaivalappil on 10/23/19.
+//  Created by Rosh Sugathan Thaivalappil on 10/24/19.
 //  Copyright © 2019 Rosh Sugathan Thaivalappil. All rights reserved.
 //
 
@@ -10,53 +10,49 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
-    @IBOutlet weak var Team_label: UILabel!
+    @IBOutlet var team_label: UILabel!
     @IBOutlet var team_textbox: UITextField!
-    @IBOutlet var team: UITextField!
-    @IBOutlet var runs: UITextField!
-    @IBOutlet var wickets: UITextField!
-    @IBOutlet var overs: UITextField!
-    @IBOutlet var extraballs: UITextField!
     @IBOutlet var tlabel: UILabel!
+    @IBOutlet var team: UITextField!
     @IBOutlet var slabel: UILabel!
-    @IBOutlet var blabel: UILabel!
+    @IBOutlet var run: UITextField!
+    @IBOutlet var rlabel: UILabel!
+    @IBOutlet var wicket: UITextField!
+    @IBOutlet var wlabel: UILabel!
+    @IBOutlet var olabel: UILabel!
+    @IBOutlet var over: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        Team_label.isHidden = true
-        team_textbox.isHidden = true
-        team.isHidden = true
-        runs.isHidden = true
-        wickets.isHidden = true
-        overs.isHidden = true
-        extraballs.isHidden = true
-        tlabel.isHidden = true
-        slabel.isHidden = true
-        blabel.isHidden = true
-    }
-
-    @IBAction func addteam(_ sender: UIButton)
-    {
-        Team_label.isHidden = false
-        team_textbox.isHidden = false
+                team_label.isHidden = true
+                team_textbox.isHidden = true
+                tlabel.isHidden = true
+                team.isHidden = true
+                slabel.isHidden = true
+                run.isHidden = true
+                rlabel.isHidden = true
+                wicket.isHidden = true
+                wlabel.isHidden = true
+                olabel.isHidden = true
+                over.isHidden = true
 
     }
 
-    @IBAction func viewboard(_ sender: UIButton)
-    {
+    @IBAction func addteam(_ sender: UIButton) {
+        team_label.isHidden = false
+                     team_textbox.isHidden = false
     }
-
-
-    @IBAction func addstat(_ sender: UIButton)
-    {
-        team.isHidden = false
-        runs.isHidden = false
-        wickets.isHidden = false
-        overs.isHidden = false
-        extraballs.isHidden = false
+    
+    @IBAction func viewboard(_ sender: UIButton) {
+    }
+    @IBAction func addstat(_ sender: UIButton) {
         tlabel.isHidden = false
+        team.isHidden = false
         slabel.isHidden = false
-        blabel.isHidden = false
+        run.isHidden = false
+        rlabel.isHidden = false
+        wicket.isHidden = false
+        wlabel.isHidden = false
+        olabel.isHidden = false
+        over.isHidden = false
     }
 }
-

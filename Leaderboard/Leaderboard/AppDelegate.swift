@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Leaderboard
 //
-//  Created by Rosh Sugathan Thaivalappil on 10/23/19.
+//  Created by Rosh Sugathan Thaivalappil on 10/24/19.
 //  Copyright © 2019 Rosh Sugathan Thaivalappil. All rights reserved.
 //
 

@@ -8,10 +8,6 @@
 
 import UIKit
 
-var runs: [String: double_t] = [:]
-var wickets: [String: double_t] = [:]
-var overs: [String: double_t] = [:]
-
 class ViewController: UIViewController {
 
     @IBOutlet var team_label: UILabel!
@@ -25,6 +21,10 @@ class ViewController: UIViewController {
     @IBOutlet var wlabel: UILabel!
     @IBOutlet var olabel: UILabel!
     @IBOutlet var over: UITextField!
+    var runs: [String: Float] = [:]
+    var wickets: [String: Float] = [:]
+    var overs: [String: Float] = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
                 team_label.isHidden = true
@@ -38,19 +38,24 @@ class ViewController: UIViewController {
                 wlabel.isHidden = true
                 olabel.isHidden = true
                 over.isHidden = true
+        run.text = "0"
+        wicket.text = "0"
+        over.text = "0"
 
     }
 
     @IBAction func addteam(_ sender: UIButton) {
         team_label.isHidden = false
         team_textbox.isHidden = false
-        let key: String? = team_textbox.text
+        let key = team_textbox.text
         runs[key!] = 0
         wickets[key!] = 0
         overs[key!] = 0
     }
     
-    @IBAction func viewboard(_ sender: UIButton) {
+    @IBAction func viewboard(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "viewtable", sender: self)
     }
     @IBAction func addstat(_ sender: UIButton) {
         tlabel.isHidden = false
@@ -62,12 +67,22 @@ class ViewController: UIViewController {
         wlabel.isHidden = false
         olabel.isHidden = false
         over.isHidden = false
-        let key: String? = team.text
-//        let r: double_t = double_t(run.text)
-//        let w: double_t = double_t(wicket.text)
-//        let o: double_t = double_t(over.text)
-//        runs[key!] = r +  runs[key!]!
-//        wickets[key!] = w + wickets[key!]!
-//        overs[key!] = o + overs[key!]!
+    }
+    @IBAction func submit(_ sender: Any)
+    {
+        let key = team.text
+        let r = Float(run.text!)
+        let w = Float(wicket.text!)
+        let o = Float(over.text!)
+        runs[key!] = Float(r!) + runs[key!]!
+        wickets[key!] = Float(w!) + wickets[key!]!
+        overs[key!] = Float(o!) + overs[key!]!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! boardViewController
+        vc.runs = self.runs
+        vc.wickets = self.wickets
+        vc.overs = self.overs
     }
 }

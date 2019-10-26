@@ -10,14 +10,19 @@ import UIKit
 
 class boardViewController: UIViewController
 {
-
-    var runs: [String: Float] = [:]
-    var wickets: [String: Float] = [:]
-    var overs: [String: Float] = [:]
-    @IBOutlet var table: UITableView!
-    override func viewDidLoad()
+    
+    @IBOutlet var team_o: UILabel!
+    @IBOutlet var run_o: UILabel!
+    @IBOutlet var wickets_o: UILabel!
+    @IBOutlet var overs_o: UILabel!
+    
+    func setcell(team: teamd)
     {
-        super.viewDidLoad()
-
+        team_o.text = team.name
+        run_o.text = String(team.runs)
+        wickets_o.text = String(team.wickets)
+        overs_o.text = String(team.overs)
     }
 }
+
+

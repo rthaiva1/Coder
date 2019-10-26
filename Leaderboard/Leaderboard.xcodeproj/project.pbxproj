@@ -16,6 +16,7 @@
 		141FC1E4236159A10051705D /* LeaderboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141FC1E3236159A10051705D /* LeaderboardTests.swift */; };
 		141FC1EF236159A10051705D /* LeaderboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141FC1EE236159A10051705D /* LeaderboardUITests.swift */; };
 		1479ED522364CABB00F2A086 /* boardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479ED512364CABB00F2A086 /* boardViewController.swift */; };
+		1479ED582364F47B00F2A086 /* teamstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479ED572364F47B00F2A086 /* teamstructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		141FC1EE236159A10051705D /* LeaderboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardUITests.swift; sourceTree = "<group>"; };
 		141FC1F0236159A10051705D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1479ED512364CABB00F2A086 /* boardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boardViewController.swift; sourceTree = "<group>"; };
+		1479ED572364F47B00F2A086 /* teamstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamstructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				141FC1D5236159A10051705D /* Assets.xcassets */,
 				141FC1D7236159A10051705D /* LaunchScreen.storyboard */,
 				141FC1DA236159A10051705D /* Info.plist */,
+				1479ED572364F47B00F2A086 /* teamstructure.swift */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				141FC1D1236159A00051705D /* ViewController.swift in Sources */,
 				1479ED522364CABB00F2A086 /* boardViewController.swift in Sources */,
 				141FC1CD236159A00051705D /* AppDelegate.swift in Sources */,
+				1479ED582364F47B00F2A086 /* teamstructure.swift in Sources */,
 				141FC1CF236159A00051705D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

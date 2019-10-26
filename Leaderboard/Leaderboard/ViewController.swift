@@ -21,9 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet var wlabel: UILabel!
     @IBOutlet var olabel: UILabel!
     @IBOutlet var over: UITextField!
-    var runs: [String: Float] = [:]
-    var wickets: [String: Float] = [:]
-    var overs: [String: Float] = [:]
+    var teams: [teamd] = []
+    var list: [teamd] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +37,15 @@ class ViewController: UIViewController {
                 wlabel.isHidden = true
                 olabel.isHidden = true
                 over.isHidden = true
-        run.text = "0"
-        wicket.text = "0"
-        over.text = "0"
 
     }
 
     @IBAction func addteam(_ sender: UIButton) {
         team_label.isHidden = false
         team_textbox.isHidden = false
-        let key = team_textbox.text
-        runs[key!] = 0
-        wickets[key!] = 0
-        overs[key!] = 0
+        let temp = teamd(name: String(team_textbox.text!) ,runs: 0, wickets: 0, overs: 0.0)
+        list.append(temp)
+        teams = list
     }
     
     @IBAction func viewboard(_ sender: UIButton)
@@ -67,22 +62,43 @@ class ViewController: UIViewController {
         wlabel.isHidden = false
         olabel.isHidden = false
         over.isHidden = false
+        run.text = "0"
+        wicket.text = "0"
+        over.text = "0"
     }
     @IBAction func submit(_ sender: Any)
     {
-        let key = team.text
-        let r = Float(run.text!)
-        let w = Float(wicket.text!)
-        let o = Float(over.text!)
-        runs[key!] = Float(r!) + runs[key!]!
-        wickets[key!] = Float(w!) + wickets[key!]!
-        overs[key!] = Float(o!) + overs[key!]!
+        let r = Int(run.text!)
+        let w = Int(wicket.text!)
+        let o = Double(over.text!)
+          for teamd in teams
+          {
+            if teamd.name == team.text
+            {
+                teamd.runs = r! + teamd.runs
+                teamd.wickets = w! + teamd.wickets
+                teamd.overs = o! + teamd.overs
+            }
+        }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! boardViewController
-        vc.runs = self.runs
-        vc.wickets = self.wickets
-        vc.overs = self.overs
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! boardViewController
+//        vc.teams = self.teams
+//    }
+}
+
+extension ViewController :UITableViewDataSource, UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return teams.count
     }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let team = teams[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "teamcell") as! boardViewController
+        cell.setcell(team: team)
+    }
+
 }

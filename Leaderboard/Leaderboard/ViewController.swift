@@ -8,6 +8,10 @@
 
 import UIKit
 
+var runs: [String: double_t] = [:]
+var wickets: [String: double_t] = [:]
+var overs: [String: double_t] = [:]
+
 class ViewController: UIViewController {
 
     @IBOutlet var team_label: UILabel!
@@ -39,7 +43,11 @@ class ViewController: UIViewController {
 
     @IBAction func addteam(_ sender: UIButton) {
         team_label.isHidden = false
-                     team_textbox.isHidden = false
+        team_textbox.isHidden = false
+        let key: String? = team_textbox.text
+        runs[key!] = 0
+        wickets[key!] = 0
+        overs[key!] = 0
     }
     
     @IBAction func viewboard(_ sender: UIButton) {
@@ -54,5 +62,12 @@ class ViewController: UIViewController {
         wlabel.isHidden = false
         olabel.isHidden = false
         over.isHidden = false
+        let key: String? = team.text
+//        let r: double_t = double_t(run.text)
+//        let w: double_t = double_t(wicket.text)
+//        let o: double_t = double_t(over.text)
+//        runs[key!] = r +  runs[key!]!
+//        wickets[key!] = w + wickets[key!]!
+//        overs[key!] = o + overs[key!]!
     }
 }

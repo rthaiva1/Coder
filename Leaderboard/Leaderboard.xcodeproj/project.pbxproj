@@ -17,6 +17,7 @@
 		141FC1EF236159A10051705D /* LeaderboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141FC1EE236159A10051705D /* LeaderboardUITests.swift */; };
 		1479ED582364F47B00F2A086 /* teamstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479ED572364F47B00F2A086 /* teamstructure.swift */; };
 		1479ED5A2365DC2000F2A086 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479ED592365DC2000F2A086 /* TableViewCell.swift */; };
+		1479ED60236683EF00F2A086 /* champ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479ED5F236683EF00F2A086 /* champ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		141FC1F0236159A10051705D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1479ED572364F47B00F2A086 /* teamstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamstructure.swift; sourceTree = "<group>"; };
 		1479ED592365DC2000F2A086 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1479ED5F236683EF00F2A086 /* champ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = champ.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				141FC1CE236159A00051705D /* SceneDelegate.swift */,
 				141FC1D0236159A00051705D /* ViewController.swift */,
 				1479ED592365DC2000F2A086 /* TableViewCell.swift */,
+				1479ED5F236683EF00F2A086 /* champ.swift */,
 				141FC1D2236159A00051705D /* Main.storyboard */,
 				141FC1D5236159A10051705D /* Assets.xcassets */,
 				141FC1D7236159A10051705D /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				141FC1D1236159A00051705D /* ViewController.swift in Sources */,
 				141FC1CD236159A00051705D /* AppDelegate.swift in Sources */,
 				1479ED5A2365DC2000F2A086 /* TableViewCell.swift in Sources */,
+				1479ED60236683EF00F2A086 /* champ.swift in Sources */,
 				1479ED582364F47B00F2A086 /* teamstructure.swift in Sources */,
 				141FC1CF236159A00051705D /* SceneDelegate.swift in Sources */,
 			);

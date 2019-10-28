@@ -7,19 +7,20 @@
 //
 
 import UIKit
-
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet var team_o: UILabel!
-    @IBOutlet var run_o: UILabel!
-    @IBOutlet var wicket_o: UILabel!
-    @IBOutlet var overs_o: UILabel!
-    
+ 
+    @IBOutlet var image_o: UIImageView!
+    @IBOutlet var name_o: UILabel!
+    @IBOutlet var win_o: UILabel!
+    @IBOutlet var runner_o: UILabel!
+    @IBOutlet var years_o: UILabel!
     func setcell(team: teamd)
     {
-        team_o.text = team.name
-        run_o.text = String(team.runs)
-        wicket_o.text = String(team.wickets)
-        overs_o.text = String(team.overs)
+        image_o.image = team.image
+        name_o.text = team.name
+        win_o.text = String(team.win)
+        runner_o.text = String(team.runner)
+        years_o.text = team.years
     }
 }

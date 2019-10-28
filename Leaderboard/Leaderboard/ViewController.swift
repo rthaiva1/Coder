@@ -10,129 +10,60 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-
     @IBOutlet var tableteam: UITableView!
-    @IBOutlet var team_label: UILabel!
     @IBOutlet var team_textbox: UITextField!
-    @IBOutlet var addbutton: UIButton!
-    @IBOutlet var tlabel: UILabel!
-    @IBOutlet var team: UITextField!
-    @IBOutlet var slabel: UILabel!
-    @IBOutlet var run: UITextField!
-    @IBOutlet var wicket: UITextField!
-    @IBOutlet var wlabel: UILabel!
-    @IBOutlet var olabel: UILabel!
     @IBOutlet var over: UITextField!
     @IBOutlet var submit: UIButton!
+    @IBOutlet var addbutton: UIButton!
     var teams: [teamd] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//                team_label.isHidden = true
-//                team_textbox.isHidden = true
-//                addbutton.isHidden = true
-//                tlabel.isHidden = true
-//                team.isHidden = true
-//                slabel.isHidden = true
-//                run.isHidden = true
-//                wicket.isHidden = true
-//                wlabel.isHidden = true
-//                olabel.isHidden = true
-//                over.isHidden = true
-//                submit.isHidden = true
         teams = array()
+//        team_textbox.text! = "Country Name"
+//        over.text! = "Year"
     }
 
     func array() -> [teamd]
     {
         var list: [teamd] = []
         
-        let team1 = teamd(name: "abc" ,runs: 35, wickets: 2, overs: 46.0)
-        let team2 = teamd(name: "rosh" ,runs: 46, wickets: 3, overs: 34.0)
-        let team3 = teamd(name: "wow" ,runs: 65, wickets: 5, overs: 45.3)
-        let team4 = teamd(name: "titan" ,runs: 43, wickets: 6, overs: 2.0)
-        let team5 = teamd(name: "joey" ,runs: 43, wickets: 34, overs: 56.3)
-        let team6 = teamd(name: "mon" ,runs: 24, wickets: 5, overs: 56.2)
-        
+        let team1 = teamd(image: UIImage(named: "1")!,name: "Australia" ,win: 5, runner: 2, years: "1987,1999,2003,2007,2015")
+        let team2 = teamd(image: UIImage(named: "2")!,name: "India" ,win: 2, runner: 1, years: "1983,2011")
+        let team3 = teamd(image: UIImage(named: "3")!,name: "West Indies" ,win: 2, runner: 1, years: "1975,1979")
+        let team4 = teamd(image: UIImage(named: "4")!,name: "England" ,win: 1, runner: 3, years: "2019")
+        let team5 = teamd(image: UIImage(named: "5")!,name: "Sri Lanka" ,win: 1, runner: 2, years: "1996")
+        let team6 = teamd(image: UIImage(named: "6")!,name: "Pakistan" ,win: 1, runner: 1, years: "1992")
+        let team7 = teamd(image: UIImage(named: "7")!,name: "New Zealand" ,win: 0, runner: 2, years: "")
         list.append(team1)
         list.append(team2)
         list.append(team3)
         list.append(team4)
         list.append(team5)
         list.append(team6)
-        
+        list.append(team7)
         return list
-    
     }
     
-    @IBAction func addteam(_ sender: UIButton) {
-//        team_label.isHidden = false
-//        team_textbox.isHidden = false
-//        addbutton.isHidden = false
+    @IBAction func addteam(_ sender: UIButton)
+    {
+        let newpage : champ = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "championpage") as! champ
+        newpage.c = self.team_textbox.text
+        newpage.y = self.over.text
+        self.present(newpage, animated: true, completion: nil)
+        performSegue(withIdentifier: "viewchamp", sender: self)
     }
-    
     @IBAction func add(_ sender: Any)
     {
-//        let temp = teamd(name: String(team_textbox.text!) ,runs: 0, wickets: 0, overs: 0.0)
-//        teams.append(temp)
-//        teams = list
-//        team_label.isHidden = true
-//        team_textbox.isHidden = true
-//        addbutton.isHidden = true
     }
     @IBAction func viewboard(_ sender: UIButton)
     {
-        teams = array()
-//        tableteam.beginUpdates()
         performSegue(withIdentifier: "viewtable", sender: self)
-    }
-    @IBAction func addstat(_ sender: UIButton) {
-//        tlabel.isHidden = false
-//        team.isHidden = false
-//        slabel.isHidden = false
-//        run.isHidden = false
-//        wicket.isHidden = false
-//        wlabel.isHidden = false
-//        olabel.isHidden = false
-//        over.isHidden = false
-//        submit.isHidden = false
-        run.text = "0"
-        wicket.text = "0"
-        over.text = "0"
     }
     @IBAction func submit(_ sender: Any)
     {
-        let r = Int(run.text!)
-        let w = Int(wicket.text!)
-        let o = Double(over.text!)
-        
-        if let row = self.teams.firstIndex(where: {$0.name == String(team.text!)})
-        {
-            teams[row].runs = r! + teams[row].runs
-            teams[row].wickets = w! + teams[row].wickets
-            teams[row].overs = o! + teams[row].overs
-        }
-        
-//        tlabel.isHidden = true
-//        team.isHidden = true
-//        slabel.isHidden = true
-//        run.isHidden = true
-//        wicket.isHidden = true
-//        wlabel.isHidden = true
-//        olabel.isHidden = true
-//        over.isHidden = true
-//        submit.isHidden = true
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        let vc = segue.destination as! boardViewController
-////        vc.teams = self.teams
-////    if(tableteam != nil)
-////    {
-////    }
-//
-//    }
+
 }
 
 extension ViewController :UITableViewDataSource, UITableViewDelegate

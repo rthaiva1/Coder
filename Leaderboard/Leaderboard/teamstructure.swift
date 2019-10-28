@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 class teamd{
+    var image: UIImage
     var name: String
-    var runs: Int
-    var wickets: Int
-    var overs: Double
+    var win: Int
+    var runner: Int
+    var years: String
     
-    init(name: String, runs: Int, wickets: Int, overs: Double)
+    init(image: UIImage,name: String, win: Int, runner: Int, years: String)
     {
+        self.image = image
         self.name = name
-        self.runs = runs
-        self.wickets = wickets
-        self.overs = overs
+        self.win = win
+        self.runner = runner
+        self.years = years
     }
 }

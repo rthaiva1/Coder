@@ -1,0 +1,65 @@
+commit cd25646a27537ce5e53d0bab5b23994b872376dd
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Sun Oct 27 23:08:01 2019 -0400
+
+    Final changes in layout and implemented all functionality
+
+commit 29806a633dbd8b224f5e2502aedb9201e9205d1f
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Sun Oct 27 13:31:01 2019 -0400
+
+    Displaying array successful
+
+commit 6bb492b9549370d619b02ba1dbf9615ec8cd48ae
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Sat Oct 26 18:15:40 2019 -0400
+
+    table view and data passed
+
+commit 195ad480197596508c05de2a16e486d5018b328b
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Sat Oct 26 15:16:01 2019 -0400
+
+    Connecting both screens and started implementation with sharing data
+
+commit 3675e61273d3214fc62244ca49ada5ec3b9b64e8
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Fri Oct 25 23:05:18 2019 -0400
+
+    Getting values from UI
+
+commit ff37ca72b5377fdb99253904e0592d8e522072a1
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Thu Oct 24 00:43:13 2019 -0400
+
+    Crash fixed
+
+commit 1dcb40d0273e8da078feabc1b80e8c1d97422030
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Wed Oct 23 23:34:09 2019 -0400
+
+    Connecting UI to code
+
+commit 4cab5b65e5b8f50c146dd4d2c7f42502bf897058
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Tue Oct 22 23:52:38 2019 -0400
+
+    Working to connect the code to UI
+
+commit 28e61f2bbf1ecab89e7c599c7576b26aac046c12
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MacBook-Pro.local>
+Date:   Sun Oct 20 22:11:08 2019 -0400
+
+    Layout 1st page
+
+commit b11c81a5093e46c8a023fbab26106ddba23d6358
+Author: Rosh Sugathan Thaivalappil <roshsugathanthaivalappil@Roshs-MBP.lan1>
+Date:   Wed Oct 16 23:41:34 2019 -0400
+
+    Getting started
+
+commit 0879841f5c78ce5caa3912dc9c5dc614a07ea3d5
+Author: Rosh Thaivalappil <42776910+rthaiva1@users.noreply.github.com>
+Date:   Wed Oct 16 23:38:49 2019 -0400
+
+    Initial commit
